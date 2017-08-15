@@ -4,6 +4,8 @@ metadata:
   name: "{{  .Chart.Name }}"
   labels:
     chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
+  annotations:
+    prometheus.io/scrape: 'true'
 spec:
   type: {{ .Values.service.type }}
   ports:
