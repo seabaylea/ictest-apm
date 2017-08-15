@@ -1,0 +1,35 @@
+container-name-run : "ictest-express-run"
+container-name-tools : "ictest-express-tools"
+
+host-path-run : "."
+host-path-tools : "."
+
+container-path-run : "/app"
+container-path-tools : "/app"
+
+container-mounts-run:
+   - "./node_modules_linux": "/app/node_modules"
+container-mounts-tools:
+   - "./node_modules_linux": "/app/node_modules"
+
+container-port-map : "8080:8080"
+container-port-map-debug : "5858:5858"
+
+dockerfile-run : "Dockerfile"
+dockerfile-tools : "Dockerfile-tools"
+
+image-name-run : "ictest-express-run"
+image-name-tools : "ictest-express-tools"
+
+build-cmd-run : "npm install --production --unsafe-perm"
+test-cmd : "npm run test"
+build-cmd-debug : "npm install --unsafe-perm"
+
+run-cmd : ""
+debug-cmd : "npm run debug"
+stop-cmd : "npm stop"
+
+version : "0.0.3"
+chart-path : "chart/ictest"
+ibm-generated-id : "8e8c9f99-2112-4bc3-8465-df8e62109105"
+credentials-filepath : "server/localdev-config.json, vcap-local.js, credentials.json"
