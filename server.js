@@ -66,3 +66,8 @@ app.listen(port, function () {
 	console.log(`OpenAPI (Swagger) spec is available at ${address}:${port}/swagger/api`)
 	console.log(`Swagger UI is available at ${address}:${port}/explorer`)
 });
+
+function consoleWrite() {
+    console.log("INFO: writing test message");
+}
+setInterval(consoleWrite, 10000).unref();
