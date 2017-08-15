@@ -24,4 +24,4 @@ spec:
           periodSeconds: {{ .Values.livenessProbe.periodSeconds}}
         env:
           - name: PORT
-            value : {{ .Values.service.servicePort }}
+            value : "{{ .Values.service.servicePort }}"
