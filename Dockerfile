@@ -6,7 +6,7 @@ ENV PORT 8080
 WORKDIR "/app"
 
 # Install app dependencies
-COPY package.json package-lock.json ./app/
+COPY package.json package-lock.json /app/
 RUN cd /app; npm install
 
 # Bundle app source
