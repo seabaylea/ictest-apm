@@ -11,6 +11,7 @@
     "debug": "node --nolazy --debug-brk=5858 server.js"
   },
   "dependencies": {
+    "ibmapm":"^1.0.0",
     "appmetrics-dash": "git://github.com/seabaylea/appmetrics-dash",
     "cfenv": "^1.0.3",
     "express": "^4.14.0",

@@ -1,6 +1,7 @@
 'use strict'
 
 // AppMetrics monitoring instrumentation
+require('ibmapm');
 require('appmetrics-dash').attach();
 const cfenv = require('cfenv');
 const express = require('express');
